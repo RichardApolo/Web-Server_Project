@@ -125,5 +125,5 @@ app.get ("*",(req,res)=>{
 })
 
 app.listen(port, ()=>{
-    console.log("Servidor en el puerto" + port 3000)
+    console.log("Servidor en el puerto" + port)
 })
