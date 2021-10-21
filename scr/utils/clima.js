@@ -8,7 +8,8 @@ const clima = (longitud, latitud, callback)=>{
         }else if(body.error ) {
             callback("Direccion no encontrada", undefined)
         }else {
-            callback (undefined, ("En :"+ body.location.name+" ,el pronostico es: "+ body.current.weather_descriptions[0]+" y el clima es de: " + body.current.temperature + " grados")
+            callback (undefined, ("En :"+ body.location.name+" ,el pronostico es: "+ body.current.weather_descriptions[0]+" y el clima es de: " + body.current.temperature + " grados,"+
+            "una humedad de "+ body.current.humidity+ " %."+" Esta informacion fue recabada a las: "+ body.current.observation_time)
         )
         }
     })
