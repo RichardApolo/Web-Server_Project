@@ -6,6 +6,7 @@ const geocode = require ("./utils/geocode")
 const clima = require ("./utils/clima")
 const request = require ("request")
 const app = express()
+const port= process.env.PORT || 3000
 
 
 // Define paths for Express config
@@ -123,6 +124,6 @@ app.get ("*",(req,res)=>{
     })
 })
 
-app.listen(3000, ()=>{
-    console.log("Servidor en el puerto 3000")
+app.listen(port, ()=>{
+    console.log("Servidor en el puerto" + port 3000)
 })
